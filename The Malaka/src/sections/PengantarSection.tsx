@@ -1,6 +1,6 @@
 export default function PengantarSection() {
   return (
-    <section className="mb-20 mt-28 bg-primary py-20 font-dm_sans text-white">
+    <section className="mt-28 bg-primary py-20 font-dm_sans text-white">
       <div className="mx-auto w-full max-w-5xl px-6 lg:px-0">
         <div className="flex flex-col gap-5 text-center md:flex-row md:justify-between md:text-left">
           <div className="flex flex-col">
