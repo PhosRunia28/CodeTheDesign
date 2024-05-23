@@ -8,7 +8,7 @@ type NavBarProps = {
 
 export default function NavBar({ openNav, setOpenNav }: NavBarProps) {
   return (
-    <header className="relative w-full py-4">
+    <div className="relative w-full py-4">
       <nav className="flex items-center justify-between">
         {/* avatar */}
         <div className="flex items-center justify-center gap-3">
@@ -102,6 +102,6 @@ export default function NavBar({ openNav, setOpenNav }: NavBarProps) {
           Download
         </a>
       </nav>
-    </header>
+    </div>
   );
 }

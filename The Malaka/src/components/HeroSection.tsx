@@ -53,7 +53,7 @@ export default function HeroSection() {
         <img
           src="./hero-img.png"
           alt="hero image"
-          className="bg-cover bg-center"
+          className="max-w-[110%] bg-cover bg-center"
         />
       </div>
     </div>

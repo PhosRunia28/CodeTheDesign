@@ -10,6 +10,7 @@ export default {
         primary: "#00BAC7",
         darkMuted: "#272D3E",
         dark: "#272D3E",
+        lightBlue: "#EDFCFD",
       },
       clipPath: {
         customPolygon: "polygon(0 0, 100% 0, 100% 70%, 0% 100%)",
