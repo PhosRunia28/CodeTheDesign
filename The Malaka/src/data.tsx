@@ -50,3 +50,84 @@ export const cards = [
     img: "./card3.png",
   },
 ];
+
+export const bukuDigital = [
+  {
+    offer: "buku lengkap",
+    access: true,
+  },
+  {
+    offer: "Akses secara digital",
+    access: true,
+  },
+  {
+    offer: "Buku fisik",
+    access: false,
+  },
+  {
+    offer: "Mendapat pembaruan",
+    access: true,
+  },
+  {
+    offer: "Konsultasi",
+    access: true,
+  },
+  {
+    offer: "Dapat diunduh",
+    access: true,
+  },
+];
+
+export const bukuFisik = [
+  {
+    offer: "buku lengkap",
+    access: true,
+  },
+  {
+    offer: "Akses secara digital",
+    access: false,
+  },
+  {
+    offer: "Buku fisik",
+    access: true,
+  },
+  {
+    offer: "Mendapat pembaruan",
+    access: false,
+  },
+  {
+    offer: "Konsultasi",
+    access: true,
+  },
+  {
+    offer: "Dapat diunduh",
+    access: true,
+  },
+];
+
+export const bukuDigitalFisik = [
+  {
+    offer: "buku lengkap",
+    access: true,
+  },
+  {
+    offer: "Akses secara digital",
+    access: true,
+  },
+  {
+    offer: "Buku fisik",
+    access: true,
+  },
+  {
+    offer: "Mendapat pembaruan",
+    access: true,
+  },
+  {
+    offer: "Konsultasi",
+    access: true,
+  },
+  {
+    offer: "Dapat diunduh",
+    access: true,
+  },
+];

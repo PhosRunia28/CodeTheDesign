@@ -1,21 +1,16 @@
+import TitleWithBadge from "./TitleWithBadge";
+
 export default function Prantinjau() {
   return (
     <div className="flex flex-col gap-14">
-      <div className="flex flex-col gap-5 text-center">
-        <div className="mx-auto max-w-fit rounded-full bg-primary/20 px-6 py-2">
-          <h5 className="text-xs font-bold uppercase tracking-widest text-primary">
-            Pratinjau
-          </h5>
-        </div>
-        <h3 className="mx-auto w-full max-w-[39rem] text-[1.7rem] font-medium leading-snug">
-          Sebelum membeli, kamu dapat melihat beberapa halaman pratinjau isi di
-          dalam buku ini
-        </h3>
-        <p className="mx-auto w-full max-w-lg leading-relaxed text-black/80">
-          Klik pada gambar halaman di sebelah kanan buku untuk melihat lebih
-          detail halaman buku tersebut dan membaca isinya.
-        </p>
-      </div>
+      <TitleWithBadge
+        badge="Pratinjau"
+        title="Sebelum membeli, kamu dapat melihat beberapa halaman pratinjau isi di
+          dalam buku ini"
+        description="Klik pada gambar halaman di sebelah kanan buku untuk melihat lebih
+          detail halaman buku tersebut dan membaca isinya."
+        classNameBadge="text-primary bg-primary/20"
+      />
       {/* group image preview */}
       <div className="flex flex-col gap-6">
         <div className="relative flex">
