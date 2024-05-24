@@ -1,7 +1,9 @@
 import { useState } from "react";
 import CarouselItem from "./components/CarouselItem";
+import TitleWithBadge from "./components/TitleWithBadge";
 import AuthorSection from "./sections/AuthorSection";
 import BenefitSection from "./sections/BenefitSection";
+import BuySection from "./sections/BuySection";
 import CardPriceSection from "./sections/CardPriceSection";
 import CardSection from "./sections/CardSection";
 import CarouselSection from "./sections/CarouselSection";
@@ -19,6 +21,7 @@ function App() {
       <CardPriceSection />
       <AuthorSection />
       <CarouselSection />
+      <BuySection />
     </>
   );
 }
