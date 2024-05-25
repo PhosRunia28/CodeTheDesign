@@ -2,7 +2,7 @@ import TitleWithBadge from "../components/TitleWithBadge";
 
 export default function BuySection() {
   return (
-    <section className="mx-auto w-full max-w-5xl space-y-10 px-6 py-28 font-dm_sans lg:px-0">
+    <section className="container_section space-y-10 px-6 py-28 font-dm_sans lg:px-0">
       <TitleWithBadge
         badge="BELI BUKU"
         title="Anda ingin segera memesan buku ini?"

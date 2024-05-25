@@ -2,7 +2,7 @@ import CarouselItem from "../components/CarouselItem";
 
 export default function CarouselSection() {
   return (
-    <section className="mx-auto w-full max-w-5xl space-y-14 rounded-box bg-lightBlue px-6 pb-24 pt-24 font-dm_sans lg:px-0">
+    <section className="container_section space-y-14 rounded-box bg-lightBlue px-6 pb-24 pt-24 font-dm_sans lg:px-0">
       <div className="mx-auto flex w-full max-w-4xl flex-col gap-5 text-center md:flex-row md:justify-between md:text-left">
         <div className="flex  flex-col gap-2">
           <p className="text-xs font-bold uppercase tracking-wide text-primary">

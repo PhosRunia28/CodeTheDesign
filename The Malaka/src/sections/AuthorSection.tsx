@@ -1,6 +1,6 @@
 export default function AuthorSection() {
   return (
-    <section className="mx-auto w-full max-w-5xl px-6 pb-24 pt-[15rem] font-dm_sans lg:px-0">
+    <section className="container_section px-6 pb-24 pt-[15rem] font-dm_sans lg:px-0">
       <div className="flex flex-col justify-between gap-4 md:flex-row md:items-center lg:gap-10">
         <div>
           <img src="./author.png" alt="author" className="bg-cover bg-center" />

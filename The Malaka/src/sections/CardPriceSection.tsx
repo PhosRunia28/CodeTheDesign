@@ -6,7 +6,7 @@ export default function CardPriceSection() {
   return (
     <section className="relative -mt-20 bg-lightBlue py-48 text-white">
       <div className="absolute inset-0 -bottom-20 -skew-y-[6deg] rounded-bl-[5rem] rounded-tr-[2rem] bg-dark"></div>
-      <div className="mx-auto w-full max-w-5xl space-y-16 overflow-hidden px-6 font-dm_sans lg:px-0">
+      <div className="container_section space-y-16 overflow-hidden px-6 font-dm_sans lg:px-0">
         <TitleWithBadge
           badge="HARGA BUKU"
           title="Kamu dapat membeli buku fisik atau buku elektronik untuk dibaca di perangkat kamu"

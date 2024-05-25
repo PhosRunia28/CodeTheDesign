@@ -131,3 +131,69 @@ export const bukuDigitalFisik = [
     access: true,
   },
 ];
+
+export const linksFooter = [
+  {
+    title: "Product",
+    links: [
+      {
+        to: "#",
+        name: "Courses",
+      },
+      {
+        to: "#",
+        name: "Books",
+      },
+      {
+        to: "#",
+        name: "Freebies",
+      },
+      {
+        to: "#",
+        name: "Classes",
+      },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      {
+        to: "#",
+        name: "About Us",
+      },
+      {
+        to: "#",
+        name: "Contact",
+      },
+      {
+        to: "#",
+        name: "Privacy Policy",
+      },
+      {
+        to: "#",
+        name: "Terms of Service",
+      },
+      {
+        to: "#",
+        name: "Help",
+      },
+    ],
+  },
+  {
+    title: "get in touch",
+    links: [
+      {
+        to: "#",
+        name: "Twitter",
+      },
+      {
+        to: "#",
+        name: "Facebook",
+      },
+      {
+        to: "#",
+        name: "Dribble",
+      },
+    ],
+  },
+];

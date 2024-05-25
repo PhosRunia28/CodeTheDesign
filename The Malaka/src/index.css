@@ -3,3 +3,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container_section {
+  @apply mx-auto w-full max-w-5xl;
+}

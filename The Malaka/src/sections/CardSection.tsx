@@ -3,7 +3,7 @@ import { cards } from "../data";
 
 export default function CardSection() {
   return (
-    <section className="mx-auto mb-20 mt-24 w-full max-w-5xl px-6 font-dm_sans lg:px-0">
+    <section className="container_section mb-20 mt-24 px-6 font-dm_sans lg:px-0">
       <div className="flex flex-col gap-5 text-center md:flex-row md:justify-between md:text-left">
         <div className="flex  flex-col gap-2">
           <p className="text-xs font-bold uppercase tracking-wide text-primary">
