@@ -1,0 +1,16 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+import NavBar from "../components/NavBar";
+import Btn from "../components/Btn";
+import Hero from "../components/Hero.astro";
+---
+
+<MainLayout>
+	<NavBar client:load/>
+	<Hero/>
+</MainLayout>
+
+
+<style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+</style>
