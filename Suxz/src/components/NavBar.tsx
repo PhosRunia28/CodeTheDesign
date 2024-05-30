@@ -19,7 +19,7 @@ export default function NavBar() {
     show: { opacity: 1 },
   };
   return (
-    <header className="pb-6 pt-10">
+    <header className="container_section pb-6 pt-10">
       <nav className="flex items-center justify-between gap-5 lg:gap-12 xl:gap-16">
         <a href="/" className="flex items-center gap-2">
           <img src="/icon.svg" alt="icon" className="bg-cover bg-center" />
@@ -30,9 +30,9 @@ export default function NavBar() {
           className="relative z-40 flex cursor-pointer flex-col items-end gap-1 md:hidden"
           onClick={() => setOpenNav(!openNav)}
         >
-          <div className="bg-primary h-1 w-8 rounded-full"></div>
-          <div className="bg-primary h-1 w-6 rounded-full"></div>
-          <div className="bg-primary h-1 w-4 rounded-full"></div>
+          <div className="h-1 w-8 rounded-full bg-primary"></div>
+          <div className="h-1 w-6 rounded-full bg-primary"></div>
+          <div className="h-1 w-4 rounded-full bg-primary"></div>
         </div>
         <AnimatePresence>
           {openNav && (
@@ -51,22 +51,22 @@ export default function NavBar() {
                 className="flex h-full flex-col items-center justify-center gap-8"
               >
                 <motion.li variants={item}>
-                  <a href="#" className="hover:text-primary transition">
+                  <a href="#" className="transition hover:text-primary">
                     Home
                   </a>
                 </motion.li>
                 <motion.li variants={item}>
-                  <a href="#" className="hover:text-primary transition">
+                  <a href="#" className="transition hover:text-primary">
                     Learnings
                   </a>
                 </motion.li>
                 <motion.li variants={item}>
-                  <a href="#" className="hover:text-primary transition">
+                  <a href="#" className="transition hover:text-primary">
                     About Us
                   </a>
                 </motion.li>
                 <motion.li variants={item}>
-                  <a href="#" className="hover:text-primary transition">
+                  <a href="#" className="transition hover:text-primary">
                     Testimonial
                   </a>
                 </motion.li>
@@ -87,22 +87,22 @@ export default function NavBar() {
         {/* link navigation */}
         <ul className="mr-auto hidden items-center gap-6 md:flex">
           <li>
-            <a href="#" className="hover:text-primary transition">
+            <a href="#" className="transition hover:text-primary">
               Home
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-primary transition">
+            <a href="#" className="transition hover:text-primary">
               Learnings
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-primary transition">
+            <a href="#" className="transition hover:text-primary">
               About Us
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-primary transition">
+            <a href="#" className="transition hover:text-primary">
               Testimonial
             </a>
           </li>
