@@ -1,5 +1,6 @@
 ---
 import Btn from "./Btn";
+import { Image } from "astro:assets";
 ---
 
 <section class="mt-10 container_section">
@@ -15,8 +16,8 @@ import Btn from "./Btn";
                 <Btn to="#" className="lg:py-4 lg:px-10" muted>Our Services</Btn>
             </div>
         </div>
-        <div class="sm:w-1/2">
-            <img src="/hero.png" alt="hero" class="bg-center bg-cover sm:w-full w-[80%]">
+        <div class="sm:w-1/2 w-[80%]">
+            <Image src="/hero.png" alt="hero" width="2600" height="2500"/>
         </div>
     </div>
 </section>

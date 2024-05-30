@@ -1,5 +1,4 @@
 import { AnimatePresence, motion } from "framer-motion";
-
 import { useState } from "react";
 import Btn from "./Btn";
 export default function NavBar() {
@@ -27,12 +26,25 @@ export default function NavBar() {
         </a>
         {/* mobile link navigation */}
         <div
-          className="relative z-40 flex cursor-pointer flex-col items-end gap-1 md:hidden"
+          className="relative z-40 flex cursor-pointer flex-col items-end space-y-1.5 md:hidden"
           onClick={() => setOpenNav(!openNav)}
         >
-          <div className="h-1 w-8 rounded-full bg-primary"></div>
-          <div className="h-1 w-6 rounded-full bg-primary"></div>
-          <div className="h-1 w-4 rounded-full bg-primary"></div>
+          <motion.div
+            animate={{ rotateZ: openNav ? 45 : 0, y: openNav ? 8 : 0 }}
+            className="h-1 w-8 rounded-full bg-primary"
+          ></motion.div>
+          <motion.div
+            animate={{ width: openNav ? 0 : 24 }}
+            className="h-1 w-6 rounded-full bg-primary"
+          ></motion.div>
+          <motion.div
+            animate={{
+              rotateZ: openNav ? -45 : 0,
+              y: openNav ? -12 : 0,
+              width: openNav ? 32 : 16,
+            }}
+            className="h-1 w-4 rounded-full bg-primary"
+          ></motion.div>
         </div>
         <AnimatePresence>
           {openNav && (
