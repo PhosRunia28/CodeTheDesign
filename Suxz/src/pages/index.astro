@@ -1,14 +1,15 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
 import NavBar from "../components/NavBar";
-import Btn from "../components/Btn";
 import Hero from "../components/Hero.astro";
+import Learnings from "../components/Learnings.astro";
 import Footer from "../components/Footer";
 ---
 
 <MainLayout>
 	<NavBar client:load/>
 	<Hero/>
+	<Learnings />
 	<Footer client:visible/>
 </MainLayout>
 

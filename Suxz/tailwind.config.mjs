@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         primary: "#8C82FC",
+        secondary: "#F8F8FF",
       },
       fontFamily: {
         manrope: ["Manrope", "sans-serif"],
