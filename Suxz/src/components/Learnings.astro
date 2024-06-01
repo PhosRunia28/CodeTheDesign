@@ -1,29 +1,40 @@
 ---
-import CardItem from "./CardItem";
-import TitleSection from "./TitleSection";
+import CardItem from './CardItem.astro'
+import TitleSection from './TitleSection.astro'
+import starter from '@assets/starter.png'
+import premium from '@assets/premium.png'
+import superstar from '@assets/superstar.png'
+import bootcamp from '@assets/bootcamp.png'
 ---
 
 <section class="bg-secondary">
-    <div class="flex flex-col gap-8 container_section py-16">
-        <TitleSection section="learnings" 
-        title="Online Learning Platform International Curriculum" description="Study and understand the material class is more relaxed without time limit."/>
-        <div class="flex gap-8 flex-wrap justify-center sm:justify-between">
-            <CardItem 
-            title="Starter" 
-            image="/starter.png" 
-            description="Free class access for that start learning code and design"/>
-            <CardItem 
-            title="Starter" 
-            image="/starter.png" 
-            description="Free class access for that start learning code and design"/>
-            <CardItem 
-            title="Starter" 
-            image="/starter.png" 
-            description="Free class access for that start learning code and design"/>
-            <CardItem 
-            title="Starter" 
-            image="/starter.png" 
-            description="Free class access for that start learning code and design"/>
-        </div>
-    </div>
+	<div class="container_section flex flex-col gap-8 py-16">
+		<TitleSection
+			section="learnings"
+			title="Online Learning Platform International Curriculum"
+			description="Study and understand the material class is more relaxed without time limit."
+		/>
+		<div class="flex flex-wrap justify-center gap-8 sm:justify-between">
+			<CardItem
+				title="Starter"
+				image={starter}
+				description="Free class access for that start learning code and design"
+			/>
+			<CardItem
+				title="Starter"
+				image={premium}
+				description="Free class access for that start learning code and design"
+			/>
+			<CardItem
+				title="Starter"
+				image={superstar}
+				description="Free class access for that start learning code and design"
+			/>
+			<CardItem
+				title="Starter"
+				image={bootcamp}
+				description="Free class access for that start learning code and design"
+			/>
+		</div>
+	</div>
 </section>

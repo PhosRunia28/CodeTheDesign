@@ -1,0 +1,20 @@
+---
+const { title, description, section } = Astro.props
+interface Props {
+	title: string
+	description: string
+	section: string
+}
+---
+
+<div>
+	<h5 class="text-sm font-bold uppercase tracking-wide text-primary">
+		{section}
+	</h5>
+	<h3 class="mb-5 w-full max-w-xs text-2xl font-bold leading-snug md:max-w-sm md:text-3xl">
+		{title}
+	</h3>
+	<p class="w-full max-w-xs text-sm opacity-90 md:max-w-sm md:text-base">
+		{description}
+	</p>
+</div>
