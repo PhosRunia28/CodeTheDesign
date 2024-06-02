@@ -79,3 +79,48 @@ export const links = [
 		linkName: 'Testimonials'
 	}
 ]
+
+export const footerLinks = [
+	{
+		title: 'Company',
+		links: [
+			{
+				to: '#home',
+				linkName: 'Home'
+			},
+			{
+				to: '#blog',
+				linkName: 'Blogs'
+			},
+			{
+				to: '#careers',
+				linkName: 'Careers'
+			},
+			{
+				to: '#portofolios',
+				linkName: 'Portofolios'
+			}
+		]
+	},
+	{
+		title: 'Links',
+		links: [
+			{
+				to: '',
+				linkName: 'Home'
+			},
+			{
+				to: '',
+				linkName: 'Github'
+			},
+			{
+				to: '',
+				linkName: 'Supports'
+			},
+			{
+				to: '',
+				linkName: 'FAQs'
+			}
+		]
+	}
+]
