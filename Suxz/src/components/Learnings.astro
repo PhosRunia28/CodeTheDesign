@@ -1,10 +1,7 @@
 ---
+import { cardItems } from 'src/data'
 import CardItem from './CardItem.astro'
 import TitleSection from './TitleSection.astro'
-import starter from '@assets/starter.png'
-import premium from '@assets/premium.png'
-import superstar from '@assets/superstar.png'
-import bootcamp from '@assets/bootcamp.png'
 ---
 
 <section class="bg-secondary">
@@ -14,27 +11,12 @@ import bootcamp from '@assets/bootcamp.png'
 			title="Online Learning Platform International Curriculum"
 			description="Study and understand the material class is more relaxed without time limit."
 		/>
-		<div class="flex flex-wrap justify-center gap-8 sm:justify-between">
-			<CardItem
-				title="Starter"
-				image={starter}
-				description="Free class access for that start learning code and design"
-			/>
-			<CardItem
-				title="Starter"
-				image={premium}
-				description="Free class access for that start learning code and design"
-			/>
-			<CardItem
-				title="Starter"
-				image={superstar}
-				description="Free class access for that start learning code and design"
-			/>
-			<CardItem
-				title="Starter"
-				image={bootcamp}
-				description="Free class access for that start learning code and design"
-			/>
+		<div class="flex flex-wrap justify-center gap-8 lg:justify-between">
+			{
+				cardItems.map((card) => (
+					<CardItem title={card.title} image={card.image} description={card.description} />
+				))
+			}
 		</div>
 	</div>
 </section>

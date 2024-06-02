@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
+import { links } from 'src/data'
 import Btn from './Btn'
 export default function NavBar() {
 	const [openNav, setOpenNav] = useState(false)
@@ -62,26 +63,13 @@ export default function NavBar() {
 								exit="hidden"
 								className="flex h-full flex-col items-center justify-center gap-8"
 							>
-								<motion.li variants={item}>
-									<a href="#" className="transition hover:text-primary">
-										Home
-									</a>
-								</motion.li>
-								<motion.li variants={item}>
-									<a href="#" className="transition hover:text-primary">
-										Learnings
-									</a>
-								</motion.li>
-								<motion.li variants={item}>
-									<a href="#" className="transition hover:text-primary">
-										About Us
-									</a>
-								</motion.li>
-								<motion.li variants={item}>
-									<a href="#" className="transition hover:text-primary">
-										Testimonial
-									</a>
-								</motion.li>
+								{links.map((link, index) => (
+									<motion.li variants={item} key={index}>
+										<a href={link.to} className="transition hover:text-primary">
+											{link.linkName}
+										</a>
+									</motion.li>
+								))}
 								<div className="mx-auto flex w-full items-center justify-center gap-2">
 									<motion.li variants={item}>
 										<Btn outline to="#">
@@ -98,26 +86,13 @@ export default function NavBar() {
 				</AnimatePresence>
 				{/* link navigation */}
 				<ul className="mr-auto hidden items-center gap-6 md:flex">
-					<li>
-						<a href="#" className="transition hover:text-primary">
-							Home
-						</a>
-					</li>
-					<li>
-						<a href="#" className="transition hover:text-primary">
-							Learnings
-						</a>
-					</li>
-					<li>
-						<a href="#" className="transition hover:text-primary">
-							About Us
-						</a>
-					</li>
-					<li>
-						<a href="#" className="transition hover:text-primary">
-							Testimonial
-						</a>
-					</li>
+					{links.map((link, index) => (
+						<li key={index}>
+							<a href={link.to} className="transition hover:text-primary">
+								{link.linkName}
+							</a>
+						</li>
+					))}
 				</ul>
 				{/* cta */}
 				<div className="hidden items-center gap-2 md:flex">
