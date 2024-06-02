@@ -4,12 +4,14 @@ import NavBar from '@components/NavBar'
 import Hero from '@components/Hero.astro'
 import Learnings from '@components/Learnings.astro'
 import Footer from '@components/Footer'
+import About from '@components/About.astro'
 ---
 
 <MainLayout>
 	<NavBar client:load />
 	<Hero />
 	<Learnings />
+	<About />
 	<Footer client:visible />
 </MainLayout>
 
