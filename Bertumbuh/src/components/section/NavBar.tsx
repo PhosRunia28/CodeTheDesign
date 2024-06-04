@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronDown, Menu, Search, X } from 'lucide-react'
 import { useState } from 'react'
-import { navigationLinks } from 'src/data'
+import { navigationLinks, PROGRAMS } from 'src/data'
 import Btn from '../ui/Btn'
 import SearchInput from '../ui/SearchInput'
 export default function NavBar() {
@@ -19,8 +19,8 @@ export default function NavBar() {
 	}
 
 	const item = {
-		visible: { opacity: 1, y: 0 },
-		hidden: { opacity: 0, y: -50 }
+		visible: { opacity: 1 },
+		hidden: { opacity: 0 }
 	}
 	return (
 		<header className="relative">
@@ -35,25 +35,28 @@ export default function NavBar() {
 						</div>
 						{/* dropdown */}
 						<div className="dropdown dropdown-hover hidden items-center md:flex">
-							<div
-								tabIndex={0}
-								role="button"
-								className="m-1 flex items-center gap-3 border-0 opacity-70"
-							>
-								Programs
-								<ChevronDown />
-							</div>
-							<ul
-								tabIndex={0}
-								className="menu dropdown-content top-10 z-30 w-52 rounded-box bg-white p-2 shadow"
-							>
-								<li>
-									<a>Item 1</a>
-								</li>
-								<li>
-									<a>Item 2</a>
-								</li>
-							</ul>
+							{PROGRAMS.map((program) => (
+								<>
+									<div
+										tabIndex={0}
+										role="button"
+										className="m-1 flex items-center gap-3 border-0 opacity-70"
+									>
+										{program.title}
+										<ChevronDown />
+									</div>
+									<ul
+										tabIndex={0}
+										className="menu dropdown-content top-10 z-30 w-52 rounded-box bg-white p-2 shadow"
+									>
+										{program.links.map((link) => (
+											<li>
+												<a href={link.to}>{link.linkName}</a>
+											</li>
+										))}
+									</ul>
+								</>
+							))}
 						</div>
 					</div>
 

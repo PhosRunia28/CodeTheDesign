@@ -1,5 +1,57 @@
 ---
-
+import Dropdown from '@components/ui/Dropdown'
+import FooterItem from '@components/ui/FooterItem.astro'
+import { ALAMAT, POSTS, PROGRAMS, socialMedia } from 'src/data'
+const today = new Date()
+const year = today.getFullYear()
 ---
 
-<div>Footer</div>
+<footer class="bg-primary py-10 text-white">
+	<div class="section_container flex flex-col gap-6 sm:hidden">
+		<div class="w-full max-w-[4rem]">
+			<img src="/logo_footer.svg" alt="logo footer" class="bg-cover bg-center" />
+		</div>
+		<div class="flex flex-col gap-6">
+			<Dropdown data={POSTS} client:load />
+			<Dropdown data={PROGRAMS} client:load />
+			<Dropdown data={ALAMAT} client:load />
+		</div>
+		<div class="flex justify-between">
+			<div class="flex items-center gap-5">
+				{
+					socialMedia.map((social) => (
+						<a href={social.to} class="inline-block">
+							{<social.icon />}
+						</a>
+					))
+				}
+			</div>
+			<p class="text-sm uppercase">© {year} BERTUMBUH</p>
+		</div>
+	</div>
+	<div class="section_container hidden flex-col gap-16 sm:flex">
+		<div class="flex justify-between">
+			<div class="w-full max-w-[5rem] md:max-w-[6rem] lg:max-w-[8rem]">
+				<img src="/logo_footer.svg" alt="logo footer" class="bg-cover bg-center" />
+			</div>
+			<!-- parent items -->
+			<div class="flex gap-10 md:gap-16 lg:gap-20">
+				<FooterItem data={POSTS} />
+				<FooterItem data={PROGRAMS} />
+				<FooterItem data={ALAMAT} />
+			</div>
+		</div>
+		<div class="flex justify-between">
+			<div class="flex items-center gap-5">
+				{
+					socialMedia.map((social) => (
+						<a href={social.to} class="inline-block">
+							{<social.icon />}
+						</a>
+					))
+				}
+			</div>
+			<p class="text-sm uppercase">© {year} BERTUMBUH | SKENSALA - SMKN 1 LEMAHABANG</p>
+		</div>
+	</div>
+</footer>
