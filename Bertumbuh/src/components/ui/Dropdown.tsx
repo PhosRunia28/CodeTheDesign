@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
 type linkDropdown = {
 	to: string
 	linkName: string
@@ -19,8 +19,8 @@ export default function Dropdown({ data }: DropdownProps) {
 	const [openDropdown, setOpenDropdown] = useState(false)
 	return (
 		<div className="flex flex-col gap-2">
-			{data.map((data) => (
-				<>
+			{data.map((data, index) => (
+				<Fragment key={index}>
 					<button
 						type="button"
 						className="m-1 flex w-full max-w-fit items-center gap-3 border-0 text-lg uppercase"
@@ -54,7 +54,7 @@ export default function Dropdown({ data }: DropdownProps) {
 							</motion.ul>
 						)}
 					</AnimatePresence>
-				</>
+				</Fragment>
 			))}
 		</div>
 	)

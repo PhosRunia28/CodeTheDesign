@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronDown, Menu, Search, X } from 'lucide-react'
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
 import { navigationLinks, PROGRAMS } from 'src/data'
 import Btn from '../ui/Btn'
 import SearchInput from '../ui/SearchInput'
@@ -35,8 +35,8 @@ export default function NavBar() {
 						</div>
 						{/* dropdown */}
 						<div className="dropdown dropdown-hover hidden items-center md:flex">
-							{PROGRAMS.map((program) => (
-								<>
+							{PROGRAMS.map((program, index) => (
+								<Fragment key={index}>
 									<div
 										tabIndex={0}
 										role="button"
@@ -50,12 +50,12 @@ export default function NavBar() {
 										className="menu dropdown-content top-10 z-30 w-52 rounded-box bg-white p-2 shadow"
 									>
 										{program.links.map((link) => (
-											<li>
+											<li key={link.linkName}>
 												<a href={link.to}>{link.linkName}</a>
 											</li>
 										))}
 									</ul>
-								</>
+								</Fragment>
 							))}
 						</div>
 					</div>

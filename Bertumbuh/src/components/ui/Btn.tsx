@@ -13,7 +13,7 @@ export default function Btn({ to, outline, wide, className, children }: BtnProps
 			href={to}
 			role="button"
 			className={cn(
-				`btn border-primary bg-primary text-white shadow-sm shadow-primary hover:text-primary`,
+				`btn border-primary bg-primary text-white shadow-sm shadow-primary hover:bg-white hover:text-primary`,
 				{
 					'btn-outline bg-white text-primary hover:border-primary hover:bg-primary hover:text-white':
 						outline,
