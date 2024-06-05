@@ -1,0 +1,20 @@
+---
+import Btn from './Btn'
+
+const { title, subtitle, description, button } = Astro.props
+interface Props {
+	title: string
+	subtitle: string
+	description: string
+	button: string
+}
+---
+
+<div class="flex flex-col gap-5 md:gap-8 lg:gap-10">
+	<div class="space-y-2 lg:space-y-3">
+		<h5 class="font-semibold text-primary lg:text-lg">{subtitle}</h5>
+		<h3 class="text-2xl font-medium lg:text-4xl">{title}</h3>
+	</div>
+	<p class="w-full max-w-lg leading-relaxed opacity-90 lg:text-lg lg:leading-[2]">{description}</p>
+	<Btn to="#" className="max-w-fit">{button}</Btn>
+</div>

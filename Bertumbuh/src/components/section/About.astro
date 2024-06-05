@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets'
+import saveTheWorld from '@assets/save_the_world.png'
+import TitleWithBtn from '@components/ui/TitleWithBtn.astro'
+import { Play } from 'lucide-react'
+---
+
+<section class="section_container py-8 lg:pt-0">
+	<div class="flex flex-col gap-5 sm:flex-row sm:items-center">
+		<div class="relative sm:w-1/2">
+			<Image src={saveTheWorld} alt="save the world flower" class="w-full bg-cover bg-center" />
+			<div
+				class="absolute right-0 top-0 flex flex-col gap-3 rounded-md bg-primary p-10 text-white sm:-top-14 sm:gap-5 sm:p-8 md:top-0 lg:px-20 lg:py-12"
+			>
+				<p class="">Lihat Video</p>
+				<button class="mx-auto w-full max-w-fit rounded-full bg-white p-3 lg:p-5" type="button"
+					><Play className="text-primary" /></button
+				>
+			</div>
+		</div>
+		<TitleWithBtn
+			title="Tentang Kami"
+			subtitle="Tentang Kami"
+			description="BERTUMBUH - Adalah organisasi non-profit yang mempunyai tujuan untuk Melindungi, menjaga, merawat, dan melestarikan pohon-pohon yang ada di bumi ini"
+			button="Lihat Selengkapnya"
+		/>
+	</div>
+</section>

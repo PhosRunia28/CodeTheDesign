@@ -113,7 +113,7 @@ export default function NavBar() {
 						animate={{ y: 0, opacity: 1 }}
 						exit={{ y: -50, opacity: 0 }}
 						transition={{ duration: 0.6, ease: 'backInOut' }}
-						className="absolute inset-x-0 top-0 flex w-full flex-col items-center justify-center bg-black/90 py-10 text-center text-white md:hidden"
+						className="absolute inset-x-0 top-0 z-50 flex w-full flex-col items-center justify-center bg-black/90 py-10 text-center text-white md:hidden"
 					>
 						<motion.ul
 							initial="hidden"
