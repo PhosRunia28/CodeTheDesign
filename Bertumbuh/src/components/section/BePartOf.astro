@@ -1,0 +1,16 @@
+---
+import PaginationPage from '@components/ui/PaginationPage'
+import TitleWithDesc from '@components/ui/TitleWithDesc.astro'
+---
+
+<section class="section_container py-8 sm:py-12 lg:py-16">
+	<div class="flex flex-col gap-10 sm:flex-row lg:flex-col">
+		<TitleWithDesc
+			title="Buat Hal Sederhana Jadi Bermakna"
+			subtitle="Menjadi Bagian Bertumbuh"
+			description="Ciptakan setiap kegiatan jadi lebih bermakna dan bermanfaat"
+			center
+		/>
+		<PaginationPage client:load />
+	</div>
+</section>

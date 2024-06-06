@@ -94,3 +94,24 @@ export const socialMedia = [
 		icon: Twitter
 	}
 ]
+
+export const donaturLevel = [
+	{
+		icon: '/donatur.svg',
+		description:
+			'Anda dapat membantu dengan berdonasi untuk biaya penanaman, perwatan, bibit dan biaya oprasional lainnya',
+		button: 'Menjadi Donatur'
+	},
+	{
+		icon: '/people.svg',
+		description:
+			'Kamu dapat membantu bertumbuh dengan menjadi relawan kami. Kamu dapat langsung menanam pohon, membantu berkebun, melakukan sosialisasi dan program-program menarik lainnya',
+		button: 'Menjadi Relawan'
+	},
+	{
+		icon: '/petani.svg',
+		description:
+			'Kamu akan belajar tentang cara  menanam pohon, merawat pohon serta hal lain dengan bergabung sebagai petani',
+		button: 'Menjadi petani'
+	}
+]
