@@ -6,7 +6,7 @@ interface Props {
 	title: string
 	subtitle: string
 	description: string
-	button: string
+	button?: string
 }
 ---
 
@@ -15,6 +15,8 @@ interface Props {
 		<h5 class="font-semibold text-primary lg:text-lg">{subtitle}</h5>
 		<h3 class="text-2xl font-medium lg:text-4xl">{title}</h3>
 	</div>
-	<p class="w-full max-w-lg leading-relaxed opacity-90 lg:text-lg lg:leading-[2]">{description}</p>
+	<p class="w-full max-w-lg leading-relaxed opacity-90 sm:leading-loose lg:text-lg lg:leading-[2]">
+		{description}
+	</p>
 	<Btn to="#" className="max-w-fit">{button}</Btn>
 </div>

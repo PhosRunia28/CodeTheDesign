@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets'
+import needYou from '@assets/need_you.png'
+import Btn from '@components/ui/Btn'
+---
+
+<section class="section_container py-8 sm:py-12 lg:py-16">
+	<div
+		class="flex flex-col gap-5 sm:flex-row-reverse sm:items-center sm:gap-7 lg:justify-between lg:gap-12"
+	>
+		<div class="sm:w-[65%] md:w-[50%]">
+			<Image src={needYou} alt={'need you image'} class="" />
+		</div>
+		<div class="flex flex-col gap-5 sm:gap-7 lg:gap-10">
+			<div class="space-y-1 lg:space-y-2">
+				<h4 class="text-semibold text-primary lg:text-lg">Kami Butuh Kamu</h4>
+				<h3 class="w-full text-2xl font-medium sm:max-w-sm lg:max-w-lg lg:text-4xl lg:leading-snug">
+					Kenapa BERTUMBUH Butuh Kamu ?
+				</h3>
+			</div>
+			<div class="flex gap-10">
+				<div class="flex flex-col gap-1">
+					<h5 class="text-2xl font-medium lg:text-3xl">15,3 M</h5>
+					<p class="lg:text-lg">Pohon Ditebang</p>
+				</div>
+				<div class="flex flex-col gap-1">
+					<h5 class="text-2xl font-medium lg:text-3xl">14,7 ha</h5>
+					<p class="lg:text-lg">Hutan ditebang</p>
+				</div>
+			</div>
+			<p
+				class="w-full max-w-md text-sm leading-relaxed opacity-80 sm:leading-loose lg:text-lg lg:leading-relaxed"
+			>
+				15,3 Milyar pohon setiap tahun ditebang di dunia serta hilangnya 14,7 hektare lahan hutan
+				hilang di indonesia. Hali ini menyebabkan bumi tidak stabil dan kami mengajak kamu untuk
+				bergabung dan meraih tujuan bersama
+			</p>
+			<Btn to="#" className="w-full max-w-fit">Lihat Selengkapnya</Btn>
+		</div>
+	</div>
+</section>
