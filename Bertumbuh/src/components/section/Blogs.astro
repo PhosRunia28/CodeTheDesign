@@ -1,0 +1,52 @@
+---
+import TitleWithDesc from '@components/ui/TitleWithDesc.astro'
+import blog1 from '@assets/blog1.png'
+import MainBlog from '@components/ui/MainBlog.astro'
+import SideBlog from '@components/ui/SideBlog.astro'
+import Btn from '@components/ui/Btn'
+---
+
+<section class="section_container py-8 md:py-12 md:pt-0 lg:pb-16">
+	<div class="flex flex-col gap-8">
+		<TitleWithDesc
+			title="Artikel & Event Terbaru"
+			subtitle="Baca Tulisan Kami"
+			description="Baca dan ikuti event Bertumbuh"
+		/>
+		<div class="flex flex-col gap-8 sm:flex-row md:gap-14">
+			<MainBlog
+				img={blog1}
+				title="Selamatkan Hutan Untuk Bumi yang Sehat dan Asri"
+				description="Hutan telah banyak memberi manfaat bagi kita semua. Namun melihat data sekarang hutan di dunia terutama di Indonesia mulai terancam. Untuk tidak menimbulkan kerusakan yang lebih parah kita harus mencegahnya dengan cara. Seperti ...."
+			/>
+			<div class="flex flex-1 flex-col gap-6 md:gap-8">
+				<SideBlog
+					img={blog1}
+					title="Kenali Pengertian, Fungsi dan Jenis Hutan"
+					date="1 January 2022"
+				/>
+				<SideBlog
+					img={blog1}
+					title="Kenali Pengertian, Fungsi dan Jenis Hutan"
+					date="1 January 2022"
+				/>
+				<SideBlog
+					img={blog1}
+					title="Kenali Pengertian, Fungsi dan Jenis Hutan"
+					date="1 January 2022"
+				/>
+				<SideBlog
+					img={blog1}
+					title="Kenali Pengertian, Fungsi dan Jenis Hutan"
+					date="1 January 2022"
+				/>
+				<SideBlog
+					img={blog1}
+					title="Kenali Pengertian, Fungsi dan Jenis Hutan"
+					date="1 January 2022"
+				/>
+			</div>
+		</div>
+		<Btn to="" className="mx-auto w-full max-w-fit">Lihat Selengkapnya</Btn>
+	</div>
+</section>

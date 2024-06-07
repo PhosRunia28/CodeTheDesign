@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets'
+const { img, title, description } = Astro.props
+interface Props {
+	img: ImageMetadata
+	title: string
+	description: string
+}
+---
+
+<div class="flex flex-1 flex-col gap-5">
+	<a href="#" class="">
+		<Image src={img} alt="blog 1" class="w-full bg-cover bg-center" />
+	</a>
+	<a href="#" class="">
+		<h5 class="w-full max-w-sm text-xl font-medium lg:max-w-[30rem] lg:text-2xl lg:leading-normal">
+			{title}
+		</h5>
+	</a>
+	<p class="w-full max-w-sm leading-relaxed opacity-80 lg:max-w-[30rem]">{description}</p>
+</div>

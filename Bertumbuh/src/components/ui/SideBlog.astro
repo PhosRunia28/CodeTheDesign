@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets'
+const { img, title, date } = Astro.props
+interface Props {
+	img: ImageMetadata
+	title: string
+	date: string
+}
+---
+
+<div class="flex flex-col gap-4 min-[380px]:flex-row sm:flex-row-reverse">
+	<a href="#">
+		<Image
+			src={img}
+			alt="blog 1"
+			class="bg-cover bg-center"
+			sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px`}
+			width="150"
+		/>
+	</a>
+	<div class="flex flex-col gap-2">
+		<a href="#">
+			<h5
+				class="w-full max-w-[14rem] font-medium sm:text-sm md:max-w-xs md:text-lg md:leading-relaxed"
+			>
+				{title}
+			</h5>
+		</a>
+		<p class="text-sm opacity-80">{date}</p>
+	</div>
+</div>
