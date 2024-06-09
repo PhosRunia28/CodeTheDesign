@@ -1,0 +1,23 @@
+---
+import Btn from '@components/ui/Btn'
+import ErrorLayout from 'src/layout/ErrorLayout.astro'
+---
+
+<ErrorLayout>
+	<main class="flex flex-col gap-7 text-center md:gap-10">
+		<h2
+			class="text-[6rem] font-semibold leading-none text-primary sm:text-[7rem] sm:leading-none lg:text-[8rem] lg:leading-none"
+		>
+			404
+		</h2>
+		<div class="flex flex-col gap-3">
+			<h4 class="text-2xl font-medium md:text-3xl">Upsss... Halaman Tidak Ada</h4>
+			<p
+				class="mx-auto w-full max-w-md text-sm leading-relaxed opacity-80 sm:max-w-lg sm:text-base sm:leading-relaxed"
+			>
+				Mohon maaf, halaman yang anda buka tidak ditemukan Pastikan url yang anda masukkan benar
+			</p>
+		</div>
+		<Btn to="/" className="mx-auto w-full max-w-fit">HomePage</Btn>
+	</main>
+</ErrorLayout>

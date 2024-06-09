@@ -1,0 +1,33 @@
+---
+import AboutItem from '@components/ui/AboutItem.astro'
+import MainLayout from 'src/layout/MainLayout.astro'
+---
+
+<MainLayout>
+	<!-- breadcrumbs -->
+	<div class="bg-blue-100">
+		<div class="section_container breadcrumbs px-8 py-8 text-sm">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/about">Tentang Kami</a></li>
+			</ul>
+		</div>
+	</div>
+	<section class="section_container flex flex-col gap-14 py-28 lg:py-36">
+		<h3 class="text-center text-4xl font-semibold opacity-80">Tentang Kami</h3>
+		<div class="space-y-7 lg:space-y-14">
+			<AboutItem
+				title="Tentang Bertumbuh"
+				mainDesc="BERTUMBUH adalah organisasi non-profit yang mempunyai tujuan untuk Melindungi, menjaga, merawat, dan melestarikan pohon-pohon yang ada di dunia serta kami akan  terus menjaga kestabilan bumi lewat penanaman dan penghijauan."
+				sideDesc="Lewat penanaman dan penghijauan ini juga  kita dapat mencegah berbagai masalah seperti pemanasan global, polusi, banjir, tanah longsor serta terjaganya flora dan dan fauna yang ada di dunia dan oleh dasar ini pula organisasi Bertumbuh dibuat. Kamu juga bisa membantu Bertumbuh dengan cara menjadi relawan, petani serta kamu juga bisa berdonasi untuk mendukung kegiatan oprasional kami."
+				img="/logo_nav.svg"
+			/>
+			<AboutItem
+				title="Tentang Tim SKENSALA"
+				mainDesc="Tim SKENSALA merupakan tim perwakilan dari SMK NEGERI 1 LEMAHABANG, Cirebon. Tim ini dikirim untuk mengikuti lomba Online Web Design ( UI/UX ) yang diadakan oleh Politeknik Negeri Subang."
+				sideDesc="Tim SKENSALA beranggotakan dua orang yang terdiri dari Dimas Rizky Maulana ( Ketua ) sebagai UI/UX Web Design serta Adi Pebrian ( Anggota )  berperan sebagi UI/UX Web Design juga."
+				img="/skensala.svg"
+			/>
+		</div>
+	</section>
+</MainLayout>

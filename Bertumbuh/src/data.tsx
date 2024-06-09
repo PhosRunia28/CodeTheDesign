@@ -1,26 +1,26 @@
 export const navigationLinks = [
 	{
-		to: '',
+		to: '/',
 		linkName: 'Home'
 	},
 	{
-		to: '',
+		to: '/collaboration',
 		linkName: 'Kemitraan'
 	},
 	{
-		to: '',
+		to: '/about',
 		linkName: 'Tentang'
 	},
 	{
-		to: '',
+		to: '/weeneed',
 		linkName: 'Kami Butuh Kamu'
 	},
 	{
-		to: '',
+		to: '/blog',
 		linkName: 'Post'
 	},
 	{
-		to: '',
+		to: '/newsletter',
 		linkName: 'Newsletter'
 	}
 ]
@@ -30,15 +30,15 @@ export const POSTS = [
 		title: 'Posts',
 		links: [
 			{
-				to: '',
+				to: '/',
 				linkName: 'Berita'
 			},
 			{
-				to: '',
+				to: '/',
 				linkName: 'Event'
 			},
 			{
-				to: '',
+				to: '/blog',
 				linkName: 'Blog'
 			}
 		]
@@ -100,18 +100,21 @@ export const donaturLevel = [
 		icon: '/donatur.svg',
 		description:
 			'Anda dapat membantu dengan berdonasi untuk biaya penanaman, perwatan, bibit dan biaya oprasional lainnya',
-		button: 'Menjadi Donatur'
+		button: 'Menjadi Donatur',
+		link: '/donasi'
 	},
 	{
 		icon: '/people.svg',
 		description:
 			'Kamu dapat membantu bertumbuh dengan menjadi relawan kami. Kamu dapat langsung menanam pohon, membantu berkebun, melakukan sosialisasi dan program-program menarik lainnya',
-		button: 'Menjadi Relawan'
+		button: 'Menjadi Relawan',
+		link: '/register'
 	},
 	{
 		icon: '/petani.svg',
 		description:
 			'Kamu akan belajar tentang cara  menanam pohon, merawat pohon serta hal lain dengan bergabung sebagai petani',
-		button: 'Menjadi petani'
+		button: 'Menjadi petani',
+		link: '/'
 	}
 ]

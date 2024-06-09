@@ -2,6 +2,7 @@ interface DataItem {
 	icon: string
 	description: string
 	button: string
+	link: string
 }
 interface CardItemProps {
 	donatur: DataItem
@@ -16,7 +17,9 @@ export default function CardItem({ donatur, index }: CardItemProps) {
 				</div>
 				<p className="leading-relaxed opacity-80">{donatur.description}</p>
 				<div className="card-actions">
-					<button className="btn btn-primary">{donatur.button}</button>
+					<a role="button" href={donatur.link} className="btn btn-primary">
+						{donatur.button}
+					</a>
 				</div>
 			</div>
 		</div>

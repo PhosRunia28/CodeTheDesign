@@ -63,7 +63,7 @@ export default function NavBar() {
 					<div className="flex flex-1 justify-end gap-4">
 						{/* search input */}
 						<SearchInput desktop />
-						<Btn to="">Bergabung</Btn>
+						<Btn to="/register">Bergabung</Btn>
 					</div>
 				</nav>
 				{/* mobile nav */}
@@ -134,7 +134,7 @@ export default function NavBar() {
 									<SearchInput />
 								</motion.li>
 								<motion.li variants={item}>
-									<Btn to="">Bergabung</Btn>
+									<Btn to="/register">Bergabung</Btn>
 								</motion.li>
 							</div>
 							<button

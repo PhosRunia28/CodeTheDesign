@@ -1,13 +1,14 @@
 ---
 import { cn } from '@utils/util'
 import Btn from './Btn'
-const { title, subtitle, description, button, center } = Astro.props
+const { title, subtitle, description, button, center, link } = Astro.props
 interface Props {
 	title: string
 	subtitle: string
 	description: string
 	button?: string
 	center?: boolean
+	link?: string
 }
 ---
 
@@ -31,9 +32,9 @@ interface Props {
 		{description}
 	</p>
 	{
-		typeof button === 'string' ? (
+		typeof button === 'string' && link ? (
 			<Btn
-				to="#"
+				to={link}
 				className={cn('max-w-fit', {
 					'text-center': center
 				})}
