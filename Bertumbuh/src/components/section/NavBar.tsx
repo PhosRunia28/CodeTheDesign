@@ -60,7 +60,7 @@ export default function NavBar() {
 						</div>
 					</div>
 
-					<div className="flex flex-1 justify-end gap-4">
+					<div className="flex flex-1 items-center justify-end gap-4">
 						{/* search input */}
 						<SearchInput desktop />
 						<Btn to="/register">Bergabung</Btn>

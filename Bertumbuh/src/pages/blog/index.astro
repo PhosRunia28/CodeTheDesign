@@ -1,16 +1,55 @@
 ---
 import MainLayout from 'src/layout/MainLayout.astro'
+import BlogItem from '@components/ui/BlogItem.astro'
+import BreadCrumb from '@components/ui/BreadCrumb.astro'
+import { getCollection } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
+import { ARTICLES_PER_PAGE } from 'src/constant'
+// const currentPage: number | null = +Astro.url.searchParams.get('page')! || 1
+const allblogPost: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
+	(a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) =>
+		b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+)
+// const totalPage = Math.ceil(allblogPost.length / ARTICLES_PER_PAGE)
+// const articleForPage: CollectionEntry<'blog'>[] = allblogPost.slice(
+// 	(currentPage - 1) * ARTICLES_PER_PAGE,
+// 	currentPage * ARTICLES_PER_PAGE
+// )
 ---
 
 <MainLayout>
 	<!-- breadcrumbs -->
-	<div class="bg-blue-100">
-		<div class="section_container breadcrumbs px-8 py-8 text-sm">
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/blog">Blog</a></li>
-			</ul>
+	<BreadCrumb>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/blog">Blog</a></li>
+		</ul>
+	</BreadCrumb>
+	<section class="section_container py-16 lg:py-28">
+		<div class="flex flex-col gap-14">
+			<div class="flex flex-col gap-6 text-center">
+				<h3
+					class="text-3xl font-medium leading-none sm:text-4xl sm:leading-none lg:text-[2.5rem] lg:leading-none"
+				>
+					Berita, Artikel & Event
+				</h3>
+				<h4 class="mx-auto max-w-md text-sm opacity-90 sm:text-base sm:leading-relaxed">
+					Baca dan ikuti event serta program-program yang kami lakukan untuk bumi yang lebih baik
+				</h4>
+			</div>
+			<!-- blogs -->
+			<div class="flex flex-col flex-wrap justify-center gap-10 md:flex-row md:gap-16">
+				{allblogPost.map((blog) => <BlogItem blog={blog} />)}
+			</div>
+			<!-- pagination -->
+			<!-- <div class="mx-auto flex w-full max-w-md items-center justify-center gap-6">
+				<PaginationBlog
+					currentPage={currentPage}
+					totalPage={totalPage}
+					disablePrevious={currentPage === 1}
+					disableNext={currentPage === totalPage}
+				/>
+			</div> -->
 		</div>
-	</div>
-	<h1 class="">Halo</h1>
+	</section>
 </MainLayout>

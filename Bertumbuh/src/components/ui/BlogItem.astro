@@ -1,0 +1,26 @@
+---
+import type { CollectionEntry } from 'astro:content'
+const { blog } = Astro.props
+interface Props {
+	blog: CollectionEntry<'blog'>
+}
+---
+
+<div class="flex w-full max-w-sm flex-col gap-4 lg:max-w-md">
+	<a href={`/blog/${blog.slug}`} class="">
+		<img src={blog.data.image} alt="blog 1" class="w-full bg-cover bg-center" />
+	</a>
+	<!-- tags -->
+	<div class="w-full max-w-fit bg-primary px-7 py-2 text-center text-xs font-medium text-white">
+		{blog.data.tag}
+	</div>
+	<a href={`/blog/${blog.slug}`} class="">
+		<h3 class="text-xl font-medium sm:text-2xl sm:leading-snug">
+			{blog.data.title}
+		</h3>
+	</a>
+	<p class="text-sm leading-relaxed opacity-80 lg:text-base lg:leading-relaxed">
+		<!-- <Content /> -->
+		{blog.data.description.slice(0,150) + "..."}
+	</p>
+</div>

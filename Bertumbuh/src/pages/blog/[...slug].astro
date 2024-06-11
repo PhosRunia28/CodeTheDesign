@@ -1,0 +1,43 @@
+---
+import BreadCrumb from '@components/ui/BreadCrumb.astro'
+import { getCollection } from 'astro:content'
+import MainLayout from 'src/layout/MainLayout.astro'
+import { formatDate } from 'src/utils.ts'
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+	const blogEntries = await getCollection('blog')
+	return blogEntries.map((blog) => ({
+		params: { slug: blog.slug },
+		props: { blog }
+	}))
+}
+const { blog } = Astro.props
+const { Content } = await blog.render()
+---
+
+<MainLayout>
+	<!-- breadcrumbs -->
+	<BreadCrumb>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/blog">Detail Artikel</a></li>
+		</ul>
+	</BreadCrumb>
+	<section class="mx-auto w-full max-w-lg px-6 py-14 md:max-w-2xl lg:py-20">
+		<div class="flex flex-col gap-6">
+			<div class="w-full max-w-fit bg-primary px-7 py-2 text-center text-xs font-medium text-white">
+				{blog.data.tag}
+			</div>
+			<h2
+				class="w-full max-w-md text-2xl font-medium sm:text-3xl sm:leading-snug md:max-w-lg md:text-[1.9rem] md:leading-snug"
+			>
+				{blog.data.title}
+			</h2>
+			<div class="flex items-center gap-4">
+				<h5 class="border-r border-black pr-3 text-sm font-medium">{blog.data.author}</h5>
+				<p class="text-sm opacity-80">{formatDate(blog.data.pubDate)}</p>
+			</div>
+			<Content />
+		</div>
+	</section>
+</MainLayout>

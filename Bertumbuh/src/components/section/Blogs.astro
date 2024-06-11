@@ -1,9 +1,20 @@
 ---
 import TitleWithDesc from '@components/ui/TitleWithDesc.astro'
-import blog1 from '@assets/blog1.png'
+import blog2 from '../../../public/blog1.png'
 import MainBlog from '@components/ui/MainBlog.astro'
 import SideBlog from '@components/ui/SideBlog.astro'
 import Btn from '@components/ui/Btn'
+
+import { getCollection } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
+import { HOMEPAGE_ARTICLE_LIMIT } from 'src/constant'
+const allblogPost: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
+	(a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) =>
+		b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+)
+
+const mainBlogPost: CollectionEntry<'blog'> = allblogPost[0]
+const sideBlogPost: CollectionEntry<'blog'>[] = allblogPost.slice(1)
 ---
 
 <section class="section_container py-8 md:py-12 md:pt-0 lg:pb-16">
@@ -14,37 +25,9 @@ import Btn from '@components/ui/Btn'
 			description="Baca dan ikuti event Bertumbuh"
 		/>
 		<div class="flex flex-col gap-8 sm:flex-row md:gap-14">
-			<MainBlog
-				img={blog1}
-				title="Selamatkan Hutan Untuk Bumi yang Sehat dan Asri"
-				description="Hutan telah banyak memberi manfaat bagi kita semua. Namun melihat data sekarang hutan di dunia terutama di Indonesia mulai terancam. Untuk tidak menimbulkan kerusakan yang lebih parah kita harus mencegahnya dengan cara. Seperti ...."
-			/>
+			<MainBlog blog={mainBlogPost} />
 			<div class="flex flex-1 flex-col gap-6 md:gap-8">
-				<SideBlog
-					img={blog1}
-					title="Kenali Pengertian, Fungsi dan Jenis Hutan"
-					date="1 January 2022"
-				/>
-				<SideBlog
-					img={blog1}
-					title="Kenali Pengertian, Fungsi dan Jenis Hutan"
-					date="1 January 2022"
-				/>
-				<SideBlog
-					img={blog1}
-					title="Kenali Pengertian, Fungsi dan Jenis Hutan"
-					date="1 January 2022"
-				/>
-				<SideBlog
-					img={blog1}
-					title="Kenali Pengertian, Fungsi dan Jenis Hutan"
-					date="1 January 2022"
-				/>
-				<SideBlog
-					img={blog1}
-					title="Kenali Pengertian, Fungsi dan Jenis Hutan"
-					date="1 January 2022"
-				/>
+				{sideBlogPost.map((blog) => <SideBlog blog={blog} />)}
 			</div>
 		</div>
 		<Btn to="/blog" className="mx-auto w-full max-w-fit">Lihat Selengkapnya</Btn>

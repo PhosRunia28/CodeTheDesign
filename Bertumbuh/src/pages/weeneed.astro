@@ -1,17 +1,16 @@
 ---
 import MainLayout from 'src/layout/MainLayout.astro'
 import WeNeedYou from '@components/section/WeNeedYou.astro'
+import BreadCrumb from '@components/ui/BreadCrumb.astro'
 ---
 
 <MainLayout>
 	<!-- breadcrumbs -->
-	<div class="bg-blue-100">
-		<div class="section_container breadcrumbs px-8 py-8 text-sm">
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/weeneed">We Need</a></li>
-			</ul>
-		</div>
-	</div>
+	<BreadCrumb>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/weeneed">We Need</a></li>
+		</ul>
+	</BreadCrumb>
 	<WeNeedYou />
 </MainLayout>

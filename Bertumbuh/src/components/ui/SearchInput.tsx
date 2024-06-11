@@ -12,8 +12,8 @@ export default function SearchInput({ desktop }: SearchInputProps) {
 		>
 			<input
 				type="text"
-				className="w-full bg-gray-100 text-sm text-black outline-none placeholder:text-black/80 focus:border-0 focus:outline-none"
-				placeholder="Cari blog dan artikel disini ..."
+				className="w-full border-none bg-gray-100 text-sm text-black outline-none placeholder:text-black/70 focus:border-none focus:shadow-none focus:outline-none focus:ring-0"
+				placeholder="Cari blog dan artikel disini..."
 			/>
 			<button type="submit">
 				<Search

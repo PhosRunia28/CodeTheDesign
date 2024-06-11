@@ -1,16 +1,117 @@
 ---
+import BreadCrumb from '@components/ui/BreadCrumb.astro'
 import MainLayout from 'src/layout/MainLayout.astro'
 ---
 
 <MainLayout>
 	<!-- breadcrumbs -->
-	<div class="bg-blue-100">
-		<div class="section_container breadcrumbs px-8 py-8 text-sm">
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/register">Pendaftaran-dan-donasi</a></li>
-			</ul>
+	<BreadCrumb className="pb-32">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/register">Pendaftaran-dan-donasi</a></li>
+		</ul>
+	</BreadCrumb>
+	<section class="section_container">
+		<div
+			class="mx-auto -mt-24 mb-24 flex w-full max-w-md flex-col gap-12 bg-white px-6 py-10 md:mb-32 lg:max-w-4xl lg:shadow-xl"
+		>
+			<div class="flex w-full">
+				<a href="/register" class="inline-block border-b border-r border-black pb-1 pl-3 pr-5 pt-2"
+					>Daftar</a
+				>
+				<a href="/donasi" class="inline-block w-full border-t border-black py-2 pl-5">Donasi</a>
+			</div>
+			<form action="" class="space-y-7">
+				<div class="flex flex-col gap-7 lg:flex-row lg:gap-16">
+					<div class="flex w-full flex-col gap-7">
+						<div class="form-control w-full max-w-[10rem]">
+							<label class="label cursor-pointer" for="check">
+								<input type="checkbox" class="" id="check" name="secret" />
+								<span class="label-text">Secret Donatur</span>
+							</label>
+						</div>
+						<input
+							type="number"
+							required
+							class="w-full border-0 border-b border-black/20 px-5 py-3 selection:bg-primary selection:text-white placeholder:text-xl placeholder:font-medium placeholder:text-black/90 focus:border-b focus:border-black focus:shadow-none focus:outline-none focus:ring-0"
+							placeholder="Rp.5.000.000,00"
+							min={0}
+						/>
+						<input
+							type="text"
+							required
+							class="w-full border-0 border-b border-black/20 px-5 py-3 text-sm selection:bg-primary selection:text-white placeholder:text-black/90 focus:border-b focus:border-black focus:shadow-none focus:outline-none focus:ring-0"
+							placeholder="Nama Lengkap*"
+						/>
+						<input
+							type="email"
+							required
+							class="w-full border-0 border-b border-black/20 px-5 py-3 text-sm selection:bg-primary selection:text-white placeholder:text-black/90 focus:border-b focus:border-black focus:shadow-none focus:outline-none focus:ring-0"
+							placeholder="Email*"
+						/>
+						<button
+							type="submit"
+							class="hidden w-full border border-primary bg-primary py-4 text-center uppercase tracking-wide text-white transition hover:border-black hover:bg-white hover:text-black lg:block"
+							>Donasi</button
+						>
+					</div>
+					<div class="relative w-full space-y-8">
+						<h4 class="text-sm font-medium opacity-80">Pilih Metode Pembayaran</h4>
+						<div class="flex flex-wrap gap-8">
+							<div class="relative">
+								<input
+									type="radio"
+									id="ovo"
+									name="pembayaran"
+									class="peer radio absolute inset-0 opacity-0"
+								/>
+								<label for="ovo" class="label relative cursor-pointer peer-checked:border">
+									<img src="/ovo.svg" alt="bca" class="bg-cover bg-center" />
+								</label>
+							</div>
+							<div class="relative">
+								<input
+									type="radio"
+									id="gopay"
+									name="pembayaran"
+									class="peer radio absolute inset-0 opacity-0"
+								/>
+								<label for="gopay" class="label relative cursor-pointer peer-checked:border">
+									<img src="/gopay.svg" alt="bca" class="bg-cover bg-center" />
+								</label>
+							</div>
+							<div class="relative">
+								<input
+									type="radio"
+									id="bca"
+									name="pembayaran"
+									class="peer radio absolute inset-0 opacity-0"
+								/>
+								<label for="bca" class="label relative cursor-pointer peer-checked:border">
+									<img src="/bca.svg" alt="bca" class="bg-cover bg-center" />
+								</label>
+							</div>
+							<div class="relative">
+								<input
+									type="radio"
+									id="bri"
+									name="pembayaran"
+									class="peer radio absolute inset-0 opacity-0"
+								/>
+								<label for="bri" class="label relative cursor-pointer peer-checked:border">
+									<img src="/bri.svg" alt="bca" class="bg-cover bg-center" />
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- mobile btn -->
+				<button
+					type="submit"
+					class="w-full border border-primary bg-primary py-4 text-center uppercase tracking-wide text-white transition hover:border-black hover:bg-white hover:text-black lg:hidden"
+					>Donasi</button
+				>
+			</form>
 		</div>
-	</div>
-	<h1 class="">Halo</h1>
+	</section>
 </MainLayout>

@@ -1,0 +1,13 @@
+---
+import { cn } from '@utils/util'
+const { className } = Astro.props
+interface Props {
+	className?: string
+}
+---
+
+<div class="bg-blue-100">
+	<div class={cn('section_container breadcrumbs py-8 text-sm', className)}>
+		<slot />
+	</div>
+</div>

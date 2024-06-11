@@ -30,11 +30,11 @@ export const POSTS = [
 		title: 'Posts',
 		links: [
 			{
-				to: '/',
+				to: '/blog',
 				linkName: 'Berita'
 			},
 			{
-				to: '/',
+				to: '/blog',
 				linkName: 'Event'
 			},
 			{

@@ -1,31 +1,28 @@
 ---
 import { Image } from 'astro:assets'
-const { img, title, date } = Astro.props
+import type { CollectionEntry } from 'astro:content'
+import { formatDate } from 'src/utils'
+
+const { blog } = Astro.props
 interface Props {
-	img: ImageMetadata
-	title: string
-	date: string
+	blog: CollectionEntry<'blog'>
 }
 ---
 
 <div class="flex flex-col gap-4 min-[380px]:flex-row sm:flex-row-reverse">
-	<a href="#">
-		<Image
-			src={img}
-			alt="blog 1"
-			class="bg-cover bg-center"
-			sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px`}
-			width="150"
-		/>
+	<a href={`/blog/${blog.slug}`}>
+		<img src={blog.data.image} alt={blog.slug} class="w-full max-w-[11rem] bg-cover bg-center" />
+		<!-- sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px`}
+			width="150" -->
 	</a>
 	<div class="flex flex-col gap-2">
-		<a href="#">
+		<a href={`/blog/${blog.slug}`}>
 			<h5
 				class="w-full max-w-[14rem] font-medium sm:text-sm md:max-w-xs md:text-lg md:leading-relaxed"
 			>
-				{title}
+				{blog.data.title}
 			</h5>
 		</a>
-		<p class="text-sm opacity-80">{date}</p>
+		<p class="text-sm opacity-80">{formatDate(blog.data.pubDate)}</p>
 	</div>
 </div>

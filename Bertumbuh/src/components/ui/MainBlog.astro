@@ -1,21 +1,22 @@
 ---
-import { Image } from 'astro:assets'
-const { img, title, description } = Astro.props
+const { blog } = Astro.props
+import type { CollectionEntry } from 'astro:content'
+
 interface Props {
-	img: ImageMetadata
-	title: string
-	description: string
+	blog: CollectionEntry<'blog'>
 }
 ---
 
 <div class="flex flex-1 flex-col gap-5">
-	<a href="#" class="">
-		<Image src={img} alt="blog 1" class="w-full bg-cover bg-center" />
+	<a href={`/blog/${blog.slug}`} class="">
+		<img src={blog.data.image} alt={blog.slug} class="w-full bg-cover bg-center" />
 	</a>
-	<a href="#" class="">
+	<a href={`/blog/${blog.slug}`} class="">
 		<h5 class="w-full max-w-sm text-xl font-medium lg:max-w-[30rem] lg:text-2xl lg:leading-normal">
-			{title}
+			{blog.data.title}
 		</h5>
 	</a>
-	<p class="w-full max-w-sm leading-relaxed opacity-80 lg:max-w-[30rem]">{description}</p>
+	<p class="w-full max-w-sm leading-relaxed opacity-80 lg:max-w-[30rem]">
+		{blog.data.description.slice(0, 150) + '...'}
+	</p>
 </div>

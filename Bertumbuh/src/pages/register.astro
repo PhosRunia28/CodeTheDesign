@@ -1,16 +1,123 @@
 ---
+import BreadCrumb from '@components/ui/BreadCrumb.astro'
+import { Upload } from 'lucide-react'
 import MainLayout from 'src/layout/MainLayout.astro'
 ---
 
 <MainLayout>
 	<!-- breadcrumbs -->
-	<div class="bg-blue-100">
-		<div class="section_container breadcrumbs px-8 py-8 text-sm">
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/register">Pendaftaran-dan-donasi</a></li>
-			</ul>
+	<BreadCrumb className="pb-32">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/register">Pendaftaran-dan-donasi</a></li>
+		</ul>
+	</BreadCrumb>
+	<section class="section_container">
+		<div
+			class="mx-auto -mt-24 mb-24 flex w-full max-w-md flex-col gap-12 bg-white px-6 py-10 md:mb-32 md:max-w-4xl md:shadow-xl"
+		>
+			<div class="flex w-full">
+				<a href="/register" class="inline-block border-r border-t border-black pl-4 pr-5 pt-2"
+					>Daftar</a
+				>
+				<a href="/donasi" class="inline-block w-full border-b border-black pb-2 pl-5 pt-2">Donasi</a
+				>
+			</div>
+			<form action="" class="space-y-7">
+				<div class="flex flex-col gap-7 md:flex-row md:gap-16">
+					<div class="flex w-full flex-col gap-7">
+						<input
+							type="text"
+							required
+							class="w-full border-0 border-b border-black/20 px-5 py-3 text-sm selection:bg-primary selection:text-white placeholder:text-black/90 focus:border-b focus:border-black focus:shadow-none focus:outline-none focus:ring-0"
+							placeholder="Nama Lengkap*"
+						/>
+						<input
+							type="text"
+							required
+							class="w-full border-0 border-b border-black/20 px-5 py-3 text-sm selection:bg-primary selection:text-white placeholder:text-black/90 focus:border-b focus:border-black focus:shadow-none focus:outline-none focus:ring-0"
+							placeholder="TTL*"
+						/>
+						<input
+							type="email"
+							required
+							class="w-full border-0 border-b border-black/20 px-5 py-3 text-sm selection:bg-primary selection:text-white placeholder:text-black/90 focus:border-b focus:border-black focus:shadow-none focus:outline-none focus:ring-0"
+							placeholder="Email*"
+						/>
+						<input
+							type="text"
+							required
+							class="w-full border-0 border-b border-black/20 px-5 py-3 text-sm selection:bg-primary selection:text-white placeholder:text-black/90 focus:border-b focus:border-black focus:shadow-none focus:outline-none focus:ring-0"
+							placeholder="No Hp*"
+						/>
+						<input
+							type="text"
+							required
+							class="w-full border-0 border-b border-black/20 px-5 py-3 text-sm selection:bg-primary selection:text-white placeholder:text-black/90 focus:border-b focus:border-black focus:shadow-none focus:outline-none focus:ring-0"
+							placeholder="Status Pernikahan*"
+						/>
+						<div class="flex gap-5">
+							<input
+								type="text"
+								required
+								class="w-full border-0 border-b border-black/20 px-5 py-3 text-sm selection:bg-primary selection:text-white placeholder:text-black/90 focus:border-b focus:border-black focus:shadow-none focus:outline-none focus:ring-0"
+								placeholder="Alamat*"
+							/>
+							<input
+								type="text"
+								required
+								class="w-full border-0 border-b border-black/20 px-5 py-3 text-sm selection:bg-primary selection:text-white placeholder:text-black/90 focus:border-b focus:border-black focus:shadow-none focus:outline-none focus:ring-0"
+								placeholder="Kode Pos*"
+							/>
+						</div>
+						<select
+							class="select w-full border-0 border-b border-black/20 selection:bg-primary selection:text-white placeholder:text-black/90 focus:border-b focus:border-primary focus:outline-none focus:outline-primary"
+						>
+							<option disabled selected>Daftar Jadi Relawan*</option>
+							<option>SuperHero</option>
+							<option>Petani</option>
+							<option>Sponsor</option>
+							<option>Pendukung</option>
+						</select>
+						<select
+							class="select w-full border-0 border-b border-black/20 selection:bg-primary selection:text-white placeholder:text-black/90 focus:border-b focus:border-primary focus:outline-none focus:outline-primary"
+						>
+							<option disabled selected>Jadi Relawan Cirebon*</option>
+							<option>SuperHero</option>
+							<option>Petani</option>
+							<option>Sponsor</option>
+							<option>Pendukung</option>
+						</select>
+						<button
+							type="submit"
+							class="hidden w-full border border-primary bg-primary py-4 text-center uppercase tracking-wide text-white transition hover:border-black hover:bg-white hover:text-black md:block"
+							>Submit</button
+						>
+					</div>
+					<div class="w-full">
+						<div
+							class="relative flex flex-col items-center justify-center gap-3 border-2 border-dashed border-black/60 py-14 md:py-24"
+						>
+							<Upload className="h-8 w-8 opacity-60" />
+							<p class="opacity-80">Unggah Foto*</p>
+							<label for="upload" class="absolute inset-0 z-30 cursor-pointer"></label>
+							<input
+								type="file"
+								id="upload"
+								name="upload"
+								class="file-input absolute -z-10 opacity-0"
+							/>
+						</div>
+						<p class="mt-4 text-center text-sm opacity-80">Size file harus dibawah 10 MB</p>
+					</div>
+				</div>
+				<!-- mobile btn -->
+				<button
+					type="submit"
+					class="w-full border border-primary bg-primary py-4 text-center uppercase tracking-wide text-white transition hover:border-black hover:bg-white hover:text-black md:hidden"
+					>Submit</button
+				>
+			</form>
 		</div>
-	</div>
-	<h1 class="">Halo</h1>
+	</section>
 </MainLayout>
