@@ -2,13 +2,13 @@ import { Button } from "../ui/button";
 
 export default function AboutUs() {
   return (
-    <div className="flex flex-col justify-center gap-12 text-center">
+    <section className="flex flex-col justify-center gap-12 pb-24 pt-28 text-center">
       {/* title */}
-      <div className="flex flex-col gap-4 text-center">
-        <h4 className="text-3xl font-semibold">
+      <div className="flex flex-col gap-4 px-6 text-center xl:px-0">
+        <h4 className="text-3xl font-semibold lg:text-[2rem]">
           What Is <span className="text-primary">Skilline?</span>
         </h4>
-        <p className="mx-auto w-full max-w-2xl text-sm leading-relaxed">
+        <p className="mx-auto w-full max-w-2xl text-sm leading-relaxed opacity-70 md:text-base md:leading-relaxed">
           Skilline is a platform that allows educators to create online classes
           whereby they can store the course materials online; manage
           assignments, quizzes and exams; monitor due dates; grade results and
@@ -46,6 +46,6 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -4,7 +4,7 @@ import Title from "../ui/Title";
 
 export default function CardAllinOne() {
   return (
-    <div className="flex flex-col justify-center gap-20 text-center">
+    <section className="flex flex-col justify-center gap-20 text-center">
       <Title
         rightTitle="All-In-One"
         leftTitle="Cloud Software"
@@ -15,6 +15,6 @@ export default function CardAllinOne() {
           <CardRoundedImage card={card} key={index} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
