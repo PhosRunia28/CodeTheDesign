@@ -2,7 +2,7 @@ import { Button } from "../ui/button";
 
 export default function AboutUs() {
   return (
-    <section className="flex flex-col justify-center gap-12 pb-24 pt-28 text-center">
+    <section className="flex flex-col justify-center gap-14 pb-24 pt-28 text-center">
       {/* title */}
       <div className="flex flex-col gap-4 px-6 text-center xl:px-0">
         <h4 className="text-3xl font-semibold lg:text-[2rem]">
@@ -19,7 +19,7 @@ export default function AboutUs() {
       <div className="flex flex-wrap justify-center gap-16">
         <div className="relative flex h-64 w-full max-w-sm rounded-xl text-white">
           {/* background image */}
-          <div className="absolute inset-0 h-full w-full rounded-xl bg-[url('./instructorAbout.png')] bg-cover bg-center"></div>
+          <div className="bg-instructorAbout absolute inset-0 h-full w-full rounded-xl bg-cover bg-center"></div>
           {/* content */}
           <div className="relative z-30 flex h-full w-full flex-col items-center justify-center gap-4 rounded-xl bg-black/20">
             <h4 className="text-lg font-semibold uppercase">For Instructor</h4>
@@ -33,7 +33,7 @@ export default function AboutUs() {
         </div>
         <div className="relative flex h-64 w-full max-w-sm rounded-xl text-white">
           {/* background image */}
-          <div className="absolute inset-0 h-full w-full rounded-xl bg-[url('./studentAbout.png')] bg-cover bg-center"></div>
+          <div className="bg-studentAbout absolute inset-0 h-full w-full rounded-xl bg-cover bg-center"></div>
           {/* content */}
           <div className="relative z-30 flex h-full w-full flex-col items-center justify-center gap-4 rounded-xl bg-black/20">
             <h4 className="text-lg font-semibold uppercase">For Students</h4>

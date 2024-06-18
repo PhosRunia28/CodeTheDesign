@@ -17,10 +17,16 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        instructorAbout: "url('/assets/instructorAbout.png')",
+        studentAbout: "url('/assets/studentAbout.png')",
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
       colors: {
+        blog: "#F4C467",
+        footer: "#252641",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
