@@ -4,5 +4,5 @@
 @tailwind utilities;
 
 .section_container {
-  @apply mx-auto w-full max-w-5xl border border-black px-6 xl:px-0;
+  @apply mx-auto w-full max-w-6xl border border-black px-6 xl:px-0;
 }

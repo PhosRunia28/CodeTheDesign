@@ -26,11 +26,11 @@ export default function HeroSection() {
           </Button>
         </div>
       </div>
-      <div className="hidden w-full pb-24 pt-16 sm:inline-block">
+      <div className="hidden w-full pb-14 pt-16 sm:inline-block">
         <img
           src="./image/heroImage.png"
           alt="hero image"
-          className="w-full bg-cover bg-center"
+          className="mx-auto w-[80%] bg-cover bg-center"
         />
       </div>
     </section>
