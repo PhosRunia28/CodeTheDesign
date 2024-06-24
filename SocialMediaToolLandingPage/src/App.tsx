@@ -1,3 +1,4 @@
+import Alternative from "./components/section/Alternative";
 import Footer from "./components/section/Footer";
 import Header from "./components/section/Header";
 import HeroSection from "./components/section/HeroSection";
@@ -6,7 +7,7 @@ import WhyUs from "./components/section/WhyUs";
 function App() {
   return (
     <>
-      <div className="relative mb-10 overflow-hidden">
+      <div className="relative mb-10 overflow-hidden bg-lightPrimary/30 sm:mb-0">
         <Header />
         <HeroSection />
         {/* background */}
@@ -15,6 +16,7 @@ function App() {
       </div>
       <WhyUs />
       <WhatShouldIDo />
+      <Alternative />
       <Footer />
     </>
   );
