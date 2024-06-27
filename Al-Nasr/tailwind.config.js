@@ -24,6 +24,7 @@ module.exports = {
       colors: {
         primary: "#1DA599",
         lightPrimary: "#C1FFFA",
+        veryLightPrimary: "#F3FFFE",
         secondary: "#FFC265",
         destructive: "#4A4A4A",
         "destructive-foreground": "#454545",
