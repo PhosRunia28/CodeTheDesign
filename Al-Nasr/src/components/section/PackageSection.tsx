@@ -1,6 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { airwayIcon } from "@/data/AirwayIcon";
 import { cardPrograms } from "@/data/Cards";
 import CardPackage from "../ui/CardPackage";
+import MarqueeItem from "../ui/MarqueeItem";
 export default function PackageSection() {
   return (
     <section className="section_container flex flex-col gap-14 py-20 font-nunito">
@@ -27,6 +29,30 @@ export default function PackageSection() {
             </h3>
           </CardContent>
         </Card>
+      </div>
+      <div className="flex flex-col gap-8 min-[1100px]:flex-row">
+        <div className="flex w-full max-w-[14rem] flex-col gap-4">
+          <h4
+            className="font-kufam text-[1.7rem] font-bold"
+            style={{ lineHeight: 1.3 }}
+          >
+            Airways Accomadation
+          </h4>
+          <p className="font-semibold">
+            We cooperate with several airlines for Umrah and Hajj
+          </p>
+          <div className="flex w-full max-w-fit items-center gap-2 rounded-full bg-lightPrimary p-2 px-6 text-destructive">
+            <img
+              src="./icon/star.svg"
+              alt="star rating"
+              className="bg-cover bg-center"
+            />
+            <p className="text-sm font-medium">5.0 Rating</p>
+          </div>
+        </div>
+        <div className="w-full">
+          <MarqueeItem images={airwayIcon} />
+        </div>
       </div>
     </section>
   );
