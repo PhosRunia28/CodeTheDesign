@@ -1,3 +1,6 @@
 [submodule "Destinize"]
 	path = Destinize
 	url = https://github.com/PhosRunia28/Destinize
+[submodule "Evenity"]
+	path = Evenity
+	url = https://github.com/PhosRunia28/Evenity
